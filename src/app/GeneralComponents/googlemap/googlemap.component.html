@@ -1,0 +1,11 @@
+<google-map 
+    height="400px"
+    width="100%"
+    [center]="center" 
+    [zoom]="zoom"
+    (mapClick)="moveMap($event)">
+</google-map>
+
+<div *ngIf="display">
+  <p>Coordinates: {{ display | json }}</p>
+</div>

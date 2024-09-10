@@ -1,0 +1,22 @@
+/* Adjust the navbar padding */
+.navbar {
+    padding-top: 0.5rem;   /* Reduce top padding */
+    padding-bottom: 0.5rem;/* Reduce bottom padding */
+}
+
+.navbar .navbar-brand img {
+    width: 50px;  /* Adjust the logo width */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+/* Adjust the link padding */
+.navbar-nav .nav-link {
+    padding-top: 0.5rem;   /* Reduce top padding */
+    padding-bottom: 0.5rem;/* Reduce bottom padding */
+}
+
+/* Adjust the active link style */
+.navbar-nav .nav-link.active-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
