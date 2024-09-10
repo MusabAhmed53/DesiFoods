@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CommonModule } from '@angular/common';
 
@@ -9,9 +9,20 @@ import { CommonModule } from '@angular/common';
   templateUrl: './googlemap.component.html',
   styleUrls: ['./googlemap.component.css']
 })
-export class GooglemapComponent {
+export class GooglemapComponent implements OnInit{
+  ngOnInit(): void {
+    let isBrowser = typeof window !== 'undefined' && !!window.navigator;
+    if (isBrowser && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((loc) => {
+        this.center = {lat: loc.coords.latitude, lng: loc.coords.longitude}
+      });
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }
+
   center: google.maps.LatLngLiteral = { lat: 24, lng: 12 };
-  zoom = 4;
+  zoom = 10;
   display: any;
 
   moveMap(event: google.maps.MapMouseEvent) {
