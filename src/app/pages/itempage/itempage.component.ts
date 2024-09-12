@@ -18,7 +18,6 @@ export class ItempageComponent {
   constructor(private param:ActivatedRoute, private service:OrderDetailsService){}
   getItemId:any;
   menuData:any;
-  myData:Model| undefined;
   ngOnInit(): void{
     this.getItemId = this.param.snapshot.paramMap.get('id');
     console.log(this.getItemId, 'fetchMenuItem');
@@ -27,7 +26,5 @@ export class ItempageComponent {
         return value.id == this.getItemId
       })
     }
-    this.myData?.val
-    // console.log(this.menuData, "Menu item loaded");
   }
 }

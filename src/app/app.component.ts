@@ -7,7 +7,7 @@ import {AboutComponent} from './pages/about/about.component';
 import {NavbarComponent} from './sharedpage/navbar/navbar.component';
 import {FooterComponent} from './sharedpage/footer/footer.component';
 import {GoogleMapsModule} from '@angular/google-maps';
-import { GooglemapComponent } from './GeneralComponents/googlemap/googlemap.component';
+import {GooglemapComponent} from './GeneralComponents/googlemap/googlemap.component';
 
 @Component({
   selector: 'app-root',
